@@ -126,7 +126,6 @@ class MyRobot(DotAgent):
                 print(vx, vy)
                 while dTol > 0.5:    
                     vx, vy = self.loc_planner.plan([self.x, self.y], curGoal)
-                    #print(vx, vy)
                     self.x += 0.0001 * vx 
                     self.y += 0.0001 * vy
                     traj.append([self.x, self.y])
